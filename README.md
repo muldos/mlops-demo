@@ -25,19 +25,19 @@ The execution flow of the demo is the following:
 
 ## Pre-requisites
 
-1. **PyPI repo:** create a remote repository on Artifactory for PyPI and use the Set-Me-Up to get the snippet to configure your local ```~/.pip/pip.conf```.
-2. **ML repo:** create a remote repository on Artifactory for the Hugging Face hub and use the Set-Me-Up to get: repository URL, access token, snippet to resolve models. Update the ```config.yml``` file with the URL and token just created.
-3. **Policy and watch:** Create a JFrog Security Essentials (Xray) policy to block unknown licences and a watch to enforce it on the newly created remote repository.
-4. Define an ignore rule for the model ```ProsusAI/finbert```.
+1. **PyPI repo:** create a remote repository on Artifactory for PyPI and use the [Set-Me-Up](https://jfrog.com/help/r/jfrog-artifactory-documentation/pypi-repositories) to get the snippet to configure your local ```~/.pip/pip.conf```.
+2. **ML repo:** create a remote repository on Artifactory for the Hugging Face hub and use the [Set-Me-Up](https://jfrog.com/help/r/jfrog-artifactory-documentation/hugging-face-repositories) to get: repository URL, access token, snippet to resolve models. Update the ```config.yml``` file with the URL and token just created.
+3. **Policy and watch:** Create a JFrog Security Essentials (Xray) [policy](https://jfrog.com/help/r/jfrog-security-documentation/creating-xray-policies-and-rules) to block unknown licences and a watch [watch](https://jfrog.com/help/r/jfrog-security-documentation/configuring-xray-watches) to enforce it on the newly created remote repository.
+4. Define an [ignore rule](https://jfrog.com/help/r/jfrog-security-documentation/ignore-rules) for the model ```ProsusAI/finbert```.
 5. Install the latest version of Python: ```brew install python```
-6. Download the stock headlines data from [keggle](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests) and extract the content in the ```Financial_News``` folder. Ensure you have the following three files: ```analyst_ratings_processed.csv```, ```raw_analyst_ratings.csv```, ```raw_partner_headlines.csv```.
+6. Download the stock headlines data from [kaggle](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests) and extract the content in the ```Financial_News``` folder. Ensure you have the following three files: ```analyst_ratings_processed.csv```, ```raw_analyst_ratings.csv```, ```raw_partner_headlines.csv```.
 7. Configure a local Jupyter Lab environemnt to run the ML notebook using one of the following options:
     a. ```brew install jupyterlab```
     b. Run the notebook via VS Code
-    c. Use alternative options or a different ML development environment
+    c. Use an alternative options or a different ML development environment
 
 ## Run
 
 1. Open the ```demo.ipynb``` notebook in your preferred ML development environment
-2. Update the ```stock_ticker``` and ```stock_name``` variables in the *Import required packages* cell with the details of the stock ticker and name of the company you want analyse
+2. Update the ```stock_ticker``` and ```stock_name``` variables in the *Import required packages* cell with the details of the stock ticker and name of the company you want to analyse
 3. Run the notebook, both PyPI and Hugging Face packages will be resolved via Artifactory
