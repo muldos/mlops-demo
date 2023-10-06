@@ -44,3 +44,20 @@ The execution flow of the demo is the following:
 
 ## Extra : running in a virtual env
 
+After cloning this repo, create the virtualenv
+
+`virtualenv venv`
+and activate it (linux / macos)
+`source ./venv/bin/activate`
+
+now install the pre-requisite inside your virtualenv from the requirements.txt file: 
+
+`pip install -r requirements.txt`
+
+Once all the pre-requisite installed, create a kernel inside the virtualenv that you will use to run your jupyter notebook : 
+
+`ipython kernel install --user --name=mlops-kernel`
+
+Then when you open your notebook for the first time in vscode, use the interpreter from your venv, and the kernel you've just created.
+
+see also : https://python.plainenglish.io/how-to-work-with-python-virtual-environments-jupyter-notebooks-and-vs-code-536fac3d93a1
