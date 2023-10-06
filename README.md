@@ -41,3 +41,6 @@ The execution flow of the demo is the following:
 1. Open the ```demo.ipynb``` notebook in your preferred ML development environment
 2. Update the ```stock_ticker``` and ```stock_name``` variables in the *Import required packages* cell with the details of the stock ticker and name of the company you want to analyse
 3. Run the notebook, both PyPI and Hugging Face packages will be resolved via Artifactory
+
+## Extra : running in a virtual env
+
